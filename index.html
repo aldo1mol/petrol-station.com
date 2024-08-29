@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: url(img/photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.loginbox {
+  width: 320px;
+  height: 420px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin: auto;
+  margin-top: 100px;
+  box-sizing: border-box;
+  border: 3px solid #e20909;
+  border-radius: 30px;
+}
+.loginbox .rupee {
+  width: 100px;
+  height: 110px;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 50px);
+}
+.loginbox h1 {
+  margin-top: 0;
+  padding-top: 70px;
+  text-align: center;
+  font-size: 22px;
+}
+.loginbox form {
+  padding: 50px;
+}
+.loginbox form p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.loginbox form input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.loginbox form .password-field {
+  position: relative;
+}
+.loginbox form .password-toggle {
+  position: absolute;
+  font-size: 25px;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.loginbox form input[type=text], .loginbox form input[type=password] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+.loginbox form input[type=submit] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #e20909;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: 1s;
+}
+.loginbox form input[type=submit]:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  height: 45px;
+}/*# sourceMappingURL=index.css.map */
+</style>
+</head>
+<body>
+    <div class="loginbox">
+        <img src="img/petrol-station.png" class="rupee">
+        <h1>Login Here</h1>
+        <form>
+            <p>Username</p>
+            <input type="text" name="" id="" placeholder="Enter Username">
+            <p>Password</p>
+           <div class="password-field">
+                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <i class='bx bx-show password-toggle'></i>
+            </div>
+            <input type="submit" value="Login">
+            <!-- <i class='bx bx-show'></i> -->
+            <!-- <i class='bx bx-hide' ></i> -->
+        </form>
+    </div>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('.password-toggle').click(function() {
+            var passwordField = $('#password');
+            var fieldType = passwordField.attr('type');
+
+            if (fieldType === 'password') {
+                passwordField.attr('type', 'text');
+                $(this).removeClass('bx-show').addClass('bx-hide');
+            } else {
+                passwordField.attr('type', 'password');
+                $(this).removeClass('bx-hide').addClass('bx-show');
+            }
+        });
+    });
+    </script>
+</body>
+</html
